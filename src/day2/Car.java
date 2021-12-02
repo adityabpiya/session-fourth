@@ -9,9 +9,9 @@ public class Car {
     float zeroToHundred;
 
     //Behaviour
-    void isAccel;
-    void isBraking;
-    void isTurning;
+    void isAccel(){};
+    void isBraking(){};
+    void isTurning(){};
 
     public static void main(String[] args) {
         Car camaro = new Car();
@@ -23,7 +23,7 @@ public class Car {
 
         r8.cylinder = 10;
         r8.hp = 611;
-        r8.zeroToHundred = 2.8;
+        r8.zeroToHundred = 3;
 
 
     }
