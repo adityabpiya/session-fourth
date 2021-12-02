@@ -18,7 +18,7 @@ public class Bank {
         //a2.accountNumber = 12346;
         a2.setAccountNumber("12346");
         //a2.accountBalance = 500;
-        a2.deposit(a2, 1200);
+        a2.deposit(a2, 200);
 
         System.out.println(a1.getAccountBalance());
         System.out.println(a2.getAccountBalance());
