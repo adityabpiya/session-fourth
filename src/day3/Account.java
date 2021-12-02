@@ -42,7 +42,9 @@ public class Account {
 
     public void deposit(Account a, double amountToBeDeposited){
         //Logic to check negative balance deposited
-        a.accountBalance += amountToBeDeposited;
+        if (amountToBeDeposited > 0) {
+            a.accountBalance += amountToBeDeposited;
+        }
     }
 
 
