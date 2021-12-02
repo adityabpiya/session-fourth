@@ -27,7 +27,7 @@ public class Bank {
 //        a1.setAccountBalance(13000-200);
 //        a2.setAccountBalance(500+200);
 
-        a1.transferBalance(a1,a2,200);
+        a1.transferBalance(a1,a2,1000);
         System.out.println(a1.getAccountBalance());
         System.out.println(a2.getAccountBalance());
 

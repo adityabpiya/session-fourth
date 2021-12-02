@@ -33,9 +33,10 @@ public class Account {
         // transferring balance logic
         //TODO
         //Logic to check if balance is available
-        a1.accountBalance -= amountToBeTransferred;   //accountBalance = accountBalance - amountToBeTransferred
-        a2.accountBalance += amountToBeTransferred;   //accountBalance = accountBalance + amountToBeTransferred
-
+        if (a1.accountBalance >= amountToBeTransferred) {
+            a1.accountBalance -= amountToBeTransferred;   //accountBalance = accountBalance - amountToBeTransferred
+            a2.accountBalance += amountToBeTransferred;   //accountBalance = accountBalance + amountToBeTransferred
+        }
     }
 
 
