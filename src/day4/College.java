@@ -11,12 +11,16 @@ public class College {
         Teacher teacher = new Teacher();
 
         Person person = new Student();
-        Person person1 = new Teacher();
+        ((Student) person).getRollNumber();
 
+        Person person1 = new Teacher();
+        ((Teacher) person1).getSalary();
 
         ArrayList<Person> arrayList = new ArrayList<>();
         arrayList.add(new Student());
         arrayList.add(new Teacher());
+        arrayList.add(new Person());
+
 
     }
 
