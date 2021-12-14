@@ -1,6 +1,7 @@
 package day5;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Employee  {
 
@@ -20,8 +21,7 @@ public class Employee  {
         this.lastName = lastName;
         this.age = age;
         this.salary = salary;
-        this.hireDate = hireDate;
-
+        this.hireDate = Objects.requireNonNullElse(hireDate, LocalDate.now());
     }
 
 
@@ -31,7 +31,7 @@ public class Employee  {
         this.lastName = lastName;
         this.age = age;
         this.salary = salary;
-        this.hireDate = hireDate;
+        this.hireDate = Objects.requireNonNullElse(hireDate, LocalDate.now());
 
     }
 
@@ -77,7 +77,7 @@ public class Employee  {
         System.out.println(employee.lastName);
         System.out.println(employee.age);
         System.out.println(employee.salary);
-        System.out.println(employee.hireDate);
+        System.out.println(employee.hireDate.toString());
     }
 
 }
