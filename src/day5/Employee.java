@@ -4,47 +4,80 @@ import java.time.LocalDate;
 
 public class Employee  {
 
-    private String name;
-    private int age;
-    private double salary;
-    private LocalDate hireDate;
+    private String firstName; //Mandatory
+    private String middleName; //opt
+    private String lastName; //Mandatory
+    private int age; //Mandatory
+    private double salary; //Mandatory
+    private LocalDate hireDate; //Mandatory
 
-    public Employee(){}  //Default constructor
 
-    //paramaterized constructor
-    public Employee(String name, int age, double salary, LocalDate hireDate){
+    private Employee(){}  //Default constructor
+
+    //parameterized constructor
+    public Employee(String firstName, String lastName, int age, double salary, LocalDate hireDate){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
+        this.hireDate = hireDate;
 
     }
 
-    public String getName() {
-        return name;
+
+    public Employee(String firstName,String middleName, String lastName, int age, double salary, LocalDate hireDate){
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
+        this.hireDate = hireDate;
+
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+
 
     public double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
+
 
     public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(LocalDate hireDate) {
-        this.hireDate = hireDate;
+
+    public void raiseSalary(Employee employee, double percentage){
+        employee.salary += (employee.salary * percentage)/100;
     }
+
+
+    public void displayEmployeeDetail (Employee employee){
+        System.out.println(employee.firstName);
+        System.out.println(employee.middleName);
+        System.out.println(employee.lastName);
+        System.out.println(employee.age);
+        System.out.println(employee.salary);
+        System.out.println(employee.hireDate);
+    }
+
 }
