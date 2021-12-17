@@ -11,14 +11,14 @@ public class Bank {
         //a1.accountNumber = 123456;
         a1.setAccountNumber("12345");
         //a1.accountBalance = 13000;
-        a1.deposit(a1, 1000);
+        a1.deposit(1000);
 
         //a2.accountHolderName = "Sireej";
         a2.setAccountHolderName("Sireej");
         //a2.accountNumber = 12346;
         a2.setAccountNumber("12346");
         //a2.accountBalance = 500;
-        a2.deposit(a2, 200);
+        a2.deposit( 200);
 
         System.out.println(a1.getAccountBalance());
         System.out.println(a2.getAccountBalance());
@@ -27,7 +27,7 @@ public class Bank {
 //        a1.setAccountBalance(13000-200);
 //        a2.setAccountBalance(500+200);
 
-        a1.transferBalance(a1,a2,0);
+        a1.transferBalance(a2,200);
         System.out.println(a1.getAccountBalance());
         System.out.println(a2.getAccountBalance());
 

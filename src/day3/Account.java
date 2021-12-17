@@ -29,21 +29,25 @@ public class Account {
     }
 
     //behaviour
-    public void transferBalance(Account a1, Account a2, double amountToBeTransferred) {
+    public void transferBalance(Account a2, double amountToBeTransferred) {
         // transferring balance logic
         //TODO
         //Logic to check if balance is available
-        if (a1.accountBalance >= amountToBeTransferred) {
-            a1.accountBalance -= amountToBeTransferred;   //accountBalance = accountBalance - amountToBeTransferred
-            a2.accountBalance += amountToBeTransferred;   //accountBalance = accountBalance + amountToBeTransferred
+        if (accountBalance >= amountToBeTransferred) {
+            this.accountBalance = this.accountBalance - amountToBeTransferred;   //accountBalance = accountBalance - amountToBeTransferred
+            a2.accountBalance = a2.accountBalance + amountToBeTransferred;   //accountBalance = accountBalance + amountToBeTransferred
+        }else{
+            System.err.println("Insufficient Balance");
         }
     }
 
 
-    public void deposit(Account a, double amountToBeDeposited){
+    public void deposit(double amountToBeDeposited){
         //Logic to check negative balance deposited
         if (amountToBeDeposited > 0) {
-            a.accountBalance += amountToBeDeposited;
+            this.accountBalance = this.accountBalance + amountToBeDeposited;
+        }else{
+            System.err.println("Deposit amount cannot be negative");
         }
     }
 
