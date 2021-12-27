@@ -17,5 +17,7 @@ public class EmployeeTest {
         employee1.displayEmployeeDetail();
         employee2.displayEmployeeDetail();
 
+        System.out.println(Employee.getCount());
+
     }
 }

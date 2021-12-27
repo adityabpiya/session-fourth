@@ -12,12 +12,14 @@ public class Employee  {
     private int age; //Mandatory
     private double salary; //Mandatory
     private LocalDate hireDate; //Mandatory
+    private static int count = 0;
 
 
     private Employee(){}  //Default constructor
 
     //parameterized constructor
     public Employee(String firstName, String lastName, String socialSecurityNumber, int age, double salary, LocalDate hireDate){
+        count += 1;
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
@@ -28,6 +30,7 @@ public class Employee  {
 
 
     public Employee(String firstName,String middleName, String lastName, String socialSecurityNumber, int age, double salary, LocalDate hireDate){
+        count += 1;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -80,6 +83,9 @@ public class Employee  {
         this.salary += (this.salary * percentage)/100;
     }
 
+    public static int getCount() {
+        return count;
+    }
 
     public void displayEmployeeDetail (){
         System.out.println(this.firstName);
