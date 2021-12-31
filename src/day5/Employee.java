@@ -30,14 +30,9 @@ public class Employee  {
 
 
     public Employee(String firstName,String middleName, String lastName, String socialSecurityNumber, int age, double salary, LocalDate hireDate){
-        count += 1;
-        this.firstName = firstName;
+        this(firstName, lastName, socialSecurityNumber, age, salary, hireDate);
         this.middleName = middleName;
-        this.lastName = lastName;
-        this.socialSecurityNumber = socialSecurityNumber;
-        this.age = age;
-        this.salary = salary;
-        this.hireDate = Objects.requireNonNullElse(hireDate, LocalDate.now());
+
 
     }
 
