@@ -30,7 +30,7 @@ public class Employee  {
 
 
     public Employee(String firstName,String middleName, String lastName, String socialSecurityNumber, int age, double salary, LocalDate hireDate){
-        this(firstName, lastName, socialSecurityNumber, age, salary, hireDate);
+        this(firstName, lastName, socialSecurityNumber, age, salary, hireDate); //Calling constructor should be in first line of constructor
         this.middleName = middleName;
 
 
