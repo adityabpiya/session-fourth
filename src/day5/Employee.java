@@ -3,6 +3,9 @@ package day5;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * This class is used for representing the employees
+ */
 public class Employee  {
 
     private String firstName; //Mandatory
