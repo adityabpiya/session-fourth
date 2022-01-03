@@ -42,6 +42,17 @@ public class StringTest {
         if(nullString != null){
             System.out.println(nullString.length());
         }
+
+        //While concatenating large number of Strings, use String Builder
+        StringBuilder builder = new StringBuilder();
+        builder.append("Hi! ");
+        builder.append("I am ");
+        builder.append("Learning ");
+        builder.append("String Builder.");
+
+        System.out.println(builder.toString());
+
+
     }
 
 }
