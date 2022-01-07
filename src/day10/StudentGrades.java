@@ -26,10 +26,9 @@ public class StudentGrades {
 
         int fullScore = 500;
         int totalScore = mathScore + scienceScore + socialScore + englishScore + nepaliScore;
-        float percnt = (float) totalScore / (float) fullScore;
-        float perc = percnt * 100;
+        float perc = (((float) totalScore / (float) fullScore) * 100);
 
-        System.out.println(totalScore);
+        System.out.println("Yout total score is " + totalScore);
 
         System.out.println("Your total percentage is " + perc);
 
