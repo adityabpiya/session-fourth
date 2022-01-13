@@ -18,7 +18,14 @@ public class InheritanceTest {
         Employee[] staffs = new Employee[3];
         Manager boss = new Manager("Aditya", 9000);
 
+        Executive executive = new Executive("Ayushma", 50000);
+
         staffs[0] = boss;
+
+        if (staffs[1] instanceof Manager) { //Makes sure to run the codes below only after confirming staff[1] is a manager
+            Manager manager = (Manager) staffs[0]; //Did this so that we could call setBonus as it wasnt allwing it to do it due to it being set as employee
+            manager.setBonus(200);
+        }
     }
 
 }

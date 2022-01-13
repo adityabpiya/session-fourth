@@ -12,7 +12,7 @@ public class Employee {
     }
 
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
