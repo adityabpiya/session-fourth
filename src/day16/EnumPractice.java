@@ -20,6 +20,8 @@ public class EnumPractice {
 
         var complementList = EnumSet.complementOf(specificList); //lists objects that not in specificList
         System.out.println(complementList);
+
+        System.out.println(WeekDay.MONDAY.getAbbrev());
     }
 
 }

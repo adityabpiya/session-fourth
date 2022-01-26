@@ -7,7 +7,7 @@ public class College {
 
         Student student = new Student();
 
-        System.out.println(employee.getDescription() );
+        System.out.println(employee.getDescription());
         System.out.println(student.getDescription());
     }
 
