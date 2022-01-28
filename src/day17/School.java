@@ -26,6 +26,9 @@ public class School {
         for (Student student: students) {
             System.out.println(student);
         }
+
+        Comparable<Student> comparable1 = student1;
+
     }
 
 
