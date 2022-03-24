@@ -1,6 +1,8 @@
 package day17;
 
-public class Student extends Person implements Comparable<Student>{
+import java.io.Serializable;
+
+public class Student extends Person implements Comparable<Student>, Serializable {
 
     public int rollNumber;
 
@@ -21,6 +23,6 @@ public class Student extends Person implements Comparable<Student>{
 
     @Override
     public int compareTo(Student o) {
-        return Integer.compare(this.rollNumber, o.rollNumber);
+        return Integer.compare(o.rollNumber, this.rollNumber);
     }
 }
